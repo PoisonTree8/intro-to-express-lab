@@ -52,7 +52,7 @@ const shoes = [
   ];
 
 app.get('/shoes', (req, res) => {
-    const filteredShoes = [...shoes]
+    let filteredShoes = [...shoes]
     
     if (req.query['min-price']) {
         const minPrice = req.query['min-price']
